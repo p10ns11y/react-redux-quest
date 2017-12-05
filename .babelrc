@@ -1,9 +1,17 @@
 {
-  
+  "plugins": [
+    ["transform-class-properties", { "loose": true }],
+    "transform-object-rest-spread"
+  ],
+  "presets": [
+    ["env", { "loose": true, "modules": false }],
+    "react"
+  ],
+
   "env": {
     "test": {
       "presets": [
-        ["es2015", {"loose": true}]
+        ["env", {"loose": true}]
       ],
       "plugins": [
         ["add-module-exports"]
@@ -11,15 +19,20 @@
     },
     "cjs": {
       "presets": [
-        ["es2015", {"loose": true}]
+        ["env", {"loose": true}]
       ],
       "plugins": [
-        ["add-module-exports"]
+        "add-module-exports",
+        ["transform-class-properties", { "loose": true }],
       ]
     },
     "es": {
       "presets": [
-        ["es2015", {"loose": true, "modules": false}]
+        ["env", {"loose": true, "modules": false}]
+      ],
+      "plugins": [
+        ["transform-class-properties", { "loose": true }],
+        "transform-object-rest-spread"
       ]
     }
   }

@@ -3,11 +3,14 @@ import nodeResolve from 'rollup-plugin-node-resolve';
 import uglify from 'rollup-plugin-uglify';
 import bundleSize from 'rollup-plugin-bundle-size';
 import commonjs from 'rollup-plugin-commonjs';
+import { pascalCase } from 'change-case';
 
-const name = `apie`;
+const packageName = `react-redux-quest`;
 
 const plugins = [
-  babel(),
+  babel({
+    exclude: '**/node_modules/**'
+  }),
   nodeResolve({
     module: true,
     jsnext: true
@@ -24,7 +27,7 @@ if (isProd) plugins.push(uglify());
 export default {
   entry: `src/index.js`,
   plugins,
-  dest: `dist/${name}${isProd ? `.min` : ``}.js`,
-  moduleName: name,
+  dest: `dist/${packageName}${isProd ? `.min` : ``}.js`,
+  moduleName: pascalCase(packageName),
   format: `umd`
 };
