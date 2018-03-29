@@ -1,6 +1,6 @@
 {
   "name": "react-redux-quest",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "API and generic utilities for react and redux eco-system",
   "main": "cjs/index.js",
   "browser": "dist/react-redux-quest.js",
@@ -36,7 +36,7 @@
   "keywords": [],
   "author": "Peramanathan Sathyamoorthy (sathyam.peram@gmail.com)",
   "license": "MIT",
-  "repository": "p10ns11y/apie",
+  "repository": "p10ns11y/react-redux-quest",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.17.0",
@@ -69,5 +69,9 @@
     "isomorphic-fetch": "^2.2.1",
     "lodash.isplainobject": "^4.0.6",
     "warning": "^3.0.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6.1",
+    "react": "^16.3.0"
   }
 }
