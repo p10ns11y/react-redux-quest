@@ -1,6 +1,6 @@
 {
   "name": "react-redux-quest",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "API and generic utilities for react and redux eco-system",
   "main": "cjs/index.js",
   "browser": "dist/react-redux-quest.js",
