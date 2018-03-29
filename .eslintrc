@@ -1,3 +1,6 @@
 {
-  "extends": "standard-extended"
+  "extends": "standard-extended",
+  "rules": {
+    "indent": ["warn", 2]
+  }
 }
