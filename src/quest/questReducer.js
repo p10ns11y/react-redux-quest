@@ -15,10 +15,8 @@ function requestStatusHandler (state = {}, action) {
     [operationOnstateSlice]: action.isRequest
   };
 
-  return nextState;
-
   return Object.defineProperty(nextState, 'statusOf', {
-    get: function () {
+    get() {
       return (s) => nextState[s];
     }
   });
