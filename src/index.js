@@ -1,4 +1,5 @@
 export { default as questMiddleware } from './middleware/reduxQuest';
+export { API } from './middleware/reduxQuest';
 export { apiRequest } from './middleware/reduxQuest';
 
 export { createRegExReducer } from './utils';

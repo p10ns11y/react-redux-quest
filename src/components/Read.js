@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { apiRequest } from '../middleware/redux-quest';
+import { apiRequest } from '../middleware/reduxQuest';
 
 const {string, func} = PropTypes;
 

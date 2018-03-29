@@ -1,22 +1,22 @@
-import invariant from "invariant";
-import warning from "warning";
+import invariant from 'invariant';
+import warning from 'warning';
 
 const SUPPORTED_HTTP_METHODS = [
   // safe => idempotent methods
-  "GET",
-  "HEAD",
-  "OPTIONS",
+  'GET',
+  'HEAD',
+  'OPTIONS',
   // Not safe but idempotent methods
-  "PUT",
-  "DELETE",
+  'PUT',
+  'DELETE',
   // Not safe and not idempotent methods
-  "POST",
-  "PATCH"
+  'POST',
+  'PATCH'
 ];
 
-const FORBIDDEN_HTTP_METHODS = ["CONNECT", "TRACE", "TRACK"];
+const FORBIDDEN_HTTP_METHODS = ['CONNECT', 'TRACE', 'TRACK'];
 
-export default function validate(settings) {
+export default function validate (settings) {
   const { url, method, meta } = settings;
 
   invariant(url, 'Must specify "url"');
